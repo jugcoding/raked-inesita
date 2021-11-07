@@ -26,4 +26,4 @@ Go to [http://localhost:9292/](http://localhost:9292/)
 
 ## Other rake tasks :
 * rake compile : recompile assets and opal ruby app.
-* rake reset : cleanup, then recompile
+* rake reset : cleanup, then setup.
