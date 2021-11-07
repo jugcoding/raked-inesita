@@ -1,22 +1,31 @@
 class NavBar
   include Inesita::Component
 
-  ROUTES = %i(home description counters repositories)
-
   def render
-    nav class: 'navbar navbar-default' do
-      div class: 'container' do
-        div class: 'navbar-header' do
-          span class: 'navbar-brand' do
-            text 'Inesita'
+    nav.navbar.navbar_expand_lg.navbar_light.bg_light do
+      span.navbar_brand do
+        text ''
+      end
+      div.collapse.navbar_collapse do
+        ul.nav.navbar_nav.mr_auto do
+          li.nav_item class: class_names(active: router.current_url?(:home)) do
+            a.nav_link href: router.url_for(:home) do
+              text 'Home'
+            end
           end
-          ul class: 'nav navbar-nav' do
-            ROUTES.each do |route|
-              li class: "#{'active' if router.current_url?(route)}" do
-                a href: router.url_for(route) do
-                  text route.capitalize
-                end
-              end
+          li.nav_item class: class_names(active: router.current_url?(:description)) do
+            a.nav_link href: router.url_for(:description) do
+              text 'Description'
+            end
+          end
+          li.nav_item class: class_names(active: router.current_url?(:counter)) do
+            a.nav_link href: router.url_for(:counter) do
+              text 'Example Counter'
+            end
+          end
+          li.nav_item class: class_names(active: router.current_url?(:repositories)) do
+            a.nav_link href: router.url_for(:repositories) do
+              text 'Repositories'
             end
           end
         end

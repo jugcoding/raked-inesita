@@ -1,34 +1,27 @@
-require 'inesita'
-require 'inesita-router'
-
-require 'browser'
-require 'browser/socket'
-require 'browser/interval'
-require 'browser/http'
-
-require_tree './stores'
-require 'store'
+# require main parts of application
 
 require 'router'
+require 'store'
+
+# require all components
 require_tree './components'
 
-# fix headers
-Browser::HTTP::Request::HEADERS.delete('X-Opal-Version')
+# when document is ready render application to <body>
 
 class Application
   include Inesita::Component
 
-  inject Store
   inject Router
+  inject Store
 
   def render
-    div class: 'container' do
+    div.container do
       component NavBar
       component router
     end
   end
 end
 
-$document.ready do
-  Application.mount_to($document.body)
+Inesita::Browser.ready? do
+  Application.mount_to(Inesita::Browser.body)
 end

@@ -6,7 +6,7 @@ class Repositories
   end
 
   def render
-    button class: 'btn btn-default', onclick: -> { fetch_repos } do
+    button.btn.btn_default.btn_primary onclick: -> { fetch_repos } do
       text 'Fetch repos'
     end
     table class: 'table' do
@@ -22,9 +22,9 @@ class Repositories
         store.repos.each do |repo|
           tr do
             th { text repo['id'] }
-            td { text repo['name'] }
-            td { img height: 25, width: 25, src: repo['owner']['avatar_url'] }
-            td { text repo['owner']['login'] }
+            td { text "#{repo['first_name']} #{repo['last_name']}" }
+            td { img height: 25, width: 25, src: repo['avatar'] }
+            td { text repo['email'] }
           end
         end
       end

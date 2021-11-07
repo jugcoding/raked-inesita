@@ -1,5 +1,8 @@
-require 'bundler'
-Bundler.require
+# frozen_string_literal: true
 
-use Inesita::LiveReload
-run Inesita::Server.new
+require 'rack-livereload'
+require File.absolute_path('backend/backend.rb')
+
+use Rack::LiveReload, source: :livereload
+
+run Backend
