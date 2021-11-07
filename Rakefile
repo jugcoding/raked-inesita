@@ -13,7 +13,7 @@ Opal::Rake.config = {
     directory: %w[./tmp/pids ./log],
 
     npm_dev: %w[browserify],
-    npm: %w[bootstrap],
+    npm: %w[bootstrap @popperjs/core],
   },
 
   build: [

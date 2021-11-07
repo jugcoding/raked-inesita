@@ -14,16 +14,26 @@ Fork of : [Inesita Demo App](https://github.com/inesita-rb/playground)
 
 ## Installation
 
+### dev env example for ubuntu :
 ```sh
-$ git clone https://github.com/jugcoding/raked-inesita.git
-$ cd raked-inesita
+$ sudo apt-get update
+$ sudo apt-get install ruby ruby-bundler ruby-dev build-essential npm
 $ bundle install
 $ rake setup
 $ rake server
 ```
 
+### the app
+```sh
+$ git clone https://github.com/jugcoding/raked-inesita.git
+$ cd raked-inesita
+$ bundle install
+$ bundle exec rake setup
+$ bundle exec rake server
+```
+
 Go to [http://localhost:9292/](http://localhost:9292/)
 
 ## Other rake tasks :
-* rake compile : recompile assets and opal ruby app.
-* rake reset : cleanup, then setup.
+* bundle exec rake compile : recompile assets and opal ruby app.
+* bundle exec rake reset : cleanup, then setup.
