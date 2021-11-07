@@ -34,6 +34,9 @@ $ bundle exec rake server
 
 Go to [http://localhost:9292/](http://localhost:9292/)
 
+edit some file under ./app and see livereload magic.
+
+
 ## Other rake tasks :
 * bundle exec rake compile : recompile assets and opal ruby app.
 * bundle exec rake reset : cleanup, then setup.
