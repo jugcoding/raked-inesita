@@ -4,7 +4,7 @@ Fork of : [Inesita Demo App](https://github.com/inesita-rb/playground)
 
 ## Modifications :
 
-* last Opal version
+* latest Opal version (1.3.1)
 * sprocket v4 BUG fixed by replacing it with rake (x3 to x5 speed) [Opal Rake](https://github.com/jugcoding/opal-rake)
 * npm + browserify
 * sass
