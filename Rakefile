@@ -5,6 +5,8 @@ require 'bundler'
 
 Bundler.require(:default)
 
+ENV['OPAL_CACHE_DIR'] = './tmp/opal-builder/'
+
 require 'opal-rake'
 
 task :server do
