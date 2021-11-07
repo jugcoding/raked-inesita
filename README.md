@@ -4,8 +4,9 @@ Fork of : [Inesita Demo App](https://github.com/inesita-rb/playground)
 
 ## Modifications :
 
-* last Opal version
-* sprocket v4 BUG fixed by replacing it with rake (x3 to x5 speed) [Opal Rake](https://github.com/jugcoding/opal-rake)
+* latest Opal version (1.3.1)
+* sprocket v4 BUG fixed by replacing it with rake [Opal Rake](https://github.com/jugcoding/opal-rake)
+* fast compilation time (recompilation is instant thanks to new Opal Builder)
 * npm + browserify
 * sass
 * livereload (guard + guard-rake + guard-livereload + rack-livereload)
@@ -33,6 +34,9 @@ $ bundle exec rake server
 ```
 
 Go to [http://localhost:9292/](http://localhost:9292/)
+
+edit some file under ./app and see livereload magic.
+
 
 ## Other rake tasks :
 * bundle exec rake compile : recompile assets and opal ruby app.
