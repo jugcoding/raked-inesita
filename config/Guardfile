@@ -17,7 +17,7 @@ directories %w(app assets config backend public) \
 
 guard 'rake', task: 'compile' do
   watch(%r{^app/(.+)\.rb$})
-  watch(%r{^html/(.+)$})
+  watch(%r{^assets/(.+)$})
 end
 
 guard 'livereload' do # , js_template: './assets/livereload.js.erb'

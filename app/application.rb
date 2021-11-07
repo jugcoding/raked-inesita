@@ -6,6 +6,9 @@ require 'store'
 # require all components
 require_tree './components'
 
+# uncomment to trace render :
+# require_relative 'trace_render'
+
 # when document is ready render application to <body>
 
 class Application

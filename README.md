@@ -40,4 +40,5 @@ edit some file under ./app and see livereload magic.
 
 ## Other rake tasks :
 * bundle exec rake compile : recompile assets and opal ruby app.
-* bundle exec rake reset : cleanup, then setup.
+* bundle exec rake reset : cleanup public, then recompile.
+* bundle exec rake full_reset : cleanup node_module, public, then reinstall and recompile.
